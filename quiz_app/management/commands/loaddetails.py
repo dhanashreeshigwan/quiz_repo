@@ -5,7 +5,7 @@ class Command(BaseCommand):
     help = "loads data from the fixtures and sets the user passwords"
 
     def handle(self, *args, **options):
-        call_command('loaddata','quiz_data')
-        for user in User.objects.all():
-            user.set_password(user.password)
-            user.save()
+        call_command('loaddata', 'quiz_data')
+        # for user in User.objects.all():
+        #     user.set_password(user.password)
+        #     user.save()

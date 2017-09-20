@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from quiz_app.api.serializers import QuestionSerializer
 from quiz_app.models import Question
-from quiz_app.api.permissions import IsApiKeyProvided
+from quiz_app.api.tenant_permission import IsApiKeyProvided
 from quiz_app.api.tenant_throtling import TenantThrottle
 
 class QuestionViewSet(viewsets.ReadOnlyModelViewSet):

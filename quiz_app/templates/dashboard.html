@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>Quiz Dashboard</h1>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-success">
+                      <div class="panel-heading">Questions</div>
+                      <div class="panel-body">{{total_questions}}</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-danger">
+                      <div class="panel-heading">Answers</div>
+                      <div class="panel-body">{{total_answers}}</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="panel panel-info">
+                      <div class="panel-heading">Users</div>
+                      <div class="panel-body">{{total_users}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Tenants</div>
+        <div class="panel-body">
+            <div class="row">
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Sr. No.</th>
+                                <th>{% trans 'Name' %}</th>
+                                <th>{% trans 'Total Requests' %} </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for tenant in tenants %}
+                            <tr>
+                                <td>{{forloop.counter}}</td>
+                                <td>{{tenant}}</td>
+                                <td>{{tenant.requests.all.count}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,5 +1,4 @@
 [
-
     { "model": "auth.user",
         "pk": 1,
         "fields": {
@@ -14,7 +13,14 @@
             "password": "qwedsa123"
         }
     },
-      {
+  { "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "username": "test_user3",
+            "password": "password11"
+        }
+    },
+  {
     "model": "quiz_app.Question",
     "pk": 1,
     "fields": {
@@ -40,7 +46,6 @@
       "is_private": 0,
       "user":2
     }
-
   },
   {
     "model": "quiz_app.Question",
@@ -57,7 +62,7 @@
     "fields": {
       "title": "What is Ajax?",
       "is_private": 0,
-      "user":4
+      "user":1
     }
   },
     {
@@ -86,7 +91,6 @@
       "question": 3,
       "user":2
     }
-
   },
   {
     "model": "quiz_app.Answer",
@@ -94,7 +98,7 @@
     "fields": {
       "body": "jQuery is a fast, small, and feature-rich JavaScript library.",
       "question": 4,
-      "user":2
+      "user":3
     }
   },
     {
@@ -103,7 +107,7 @@
     "fields": {
       "body": "Ajax is a client-side script that communicates to and from a server/database without the need for a postback or a complete page refresh.",
       "question": 5,
-      "user":4
+      "user":1
     }
   },
   {
@@ -115,13 +119,11 @@
     }
   },
   {
-    "model": "quiz.Tenant",
+    "model": "quiz_app.Tenant",
     "pk": 2,
     "fields": {
       "name": "Tenant2",
       "api_key": "23cb00a63d7945eba0ff5b846de1b728"
     }
   }
-
-
 ]
