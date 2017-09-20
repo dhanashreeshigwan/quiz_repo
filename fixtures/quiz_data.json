@@ -3,21 +3,21 @@
         "pk": 1,
         "fields": {
             "username": "test_user1",
-            "password": "pwd12345"
+            "password": "password11"
         }
     },
     { "model": "auth.user",
         "pk": 2,
         "fields": {
             "username": "test_user2",
-            "password": "qwedsa123"
+            "password": "password22"
         }
     },
   { "model": "auth.user",
         "pk": 3,
         "fields": {
             "username": "test_user3",
-            "password": "password11"
+            "password": "password33"
         }
     },
   {
